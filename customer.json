@@ -1,0 +1,7 @@
+[
+  {"id": 101, "name": "Max Mustermann", "email": "max@example.com", "phone": "+49 151 111", "address": "Hauptstr. 1, Freiburg"},
+  {"id": 102, "name": "Sarah Schmidt", "email": "sarah@example.com", "phone": "+49 151 222", "address": "Berliner Allee 5, Staufen"},
+  {"id": 103, "name": "EcoDrive Solutions", "email": "fleet@ecodrive.de", "phone": "+49 761 333", "address": "Industriestr. 10, Freiburg"},
+  {"id": 104, "name": "Elena Rossi", "email": "elena@example.com", "phone": "+49 151 444", "address": "Kaiser-Joseph-Str. 12, Freiburg"},
+  {"id": 105, "name": "Julian Weber", "email": "j.weber@web.de", "phone": "+49 151 555", "address": "Schwarzwaldstr. 88, Kirchzarten"}
+]
