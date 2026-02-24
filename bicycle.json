@@ -1,0 +1,12 @@
+[
+  {"id": 1, "brand": "Canyon", "model": "Grizl CF SL", "category": "Gravel", "condition": "new", "frame_number": "CAN-991"},
+  {"id": 2, "brand": "Specialized", "model": "Turbo Vado 4.0", "category": "E-Bike", "condition": "used", "frame_number": "SPEC-102"},
+  {"id": 3, "brand": "Riese & Müller", "model": "Load 75", "category": "Cargo", "condition": "new", "frame_number": "RM-007"},
+  {"id": 4, "brand": "Cube", "model": "Kathmandu Hybrid", "category": "E-Bike", "condition": "used", "frame_number": "CUB-445"},
+  {"id": 5, "brand": "Brompton", "model": "C Line", "category": "Folding", "condition": "new", "frame_number": "BRO-221"},
+  {"id": 6, "brand": "Trek", "model": "Domane AL 2", "category": "Road", "condition": "used", "frame_number": "TRE-883"},
+  {"id": 7, "brand": "Rad Power", "model": "RadRunner 3", "category": "Cargo", "condition": "new", "frame_number": "RAD-661"},
+  {"id": 8, "brand": "Santa Cruz", "model": "Heckler", "category": "MTB", "condition": "used", "frame_number": "SC-112"},
+  {"id": 9, "brand": "Orbea", "model": "Gain M30", "category": "E-Bike", "condition": "used", "frame_number": "ORB-554"},
+  {"id": 10, "brand": "Gazelle", "model": "Ultimate C380", "category": "City", "condition": "new", "frame_number": "GAZ-900"}
+]
