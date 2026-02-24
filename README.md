@@ -4,7 +4,7 @@
 
 You are working for a leasing company that needs to modernize their internal software systems. As part of this transformation, you need to build a small prototype for a **Bicycle Lease Management System** that demonstrates your fullstack development skills and understanding of business requirements.
 
-**Your primary focus:** The logic of the Lease Contract - specifically how you link a customer to a vehicle and manage that state across the stack.
+**Your primary focus:** The logic of the Lease Contract - specifically how you link a customer to a bicycle and manage that state across the stack.
 
 ## Requirements
 
@@ -22,10 +22,9 @@ You are working for a leasing company that needs to modernize their internal sof
 - Bicycle:
   - Brand
   - Model
-  - Year
   - Frame number (unique identifier)
-  - Category (city bike / e-bike / mountain bike / road bike)
-  - Condition (NEW / USED)
+  - Category (MTB / E-Bike / Gravel / City / Cargo / Folding)
+  - Condition (new / used)
 
 - Customer
   - Name
@@ -53,7 +52,7 @@ You are working for a leasing company that needs to modernize their internal sof
 - Frontend:
   - A view/dropdown to select a Customer and a Bicycle.
   - A form to set the lease terms (dates and monthly rate).
-  - Display the Condition (New/Used) of the bike during the selection process.
+  - Display the Condition (new/used) of the bike during the selection process.
   - A "Submit" action that persists the contract and updates the UI.
 
 4. Other criteria:
