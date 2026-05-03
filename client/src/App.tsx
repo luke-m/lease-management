@@ -2,7 +2,8 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [message, setMesssage] = useState('');
+  const [bicycles, setBicycles] = useState('');
+  const [customers, setCustomers] = useState('');
 
   
   return (
@@ -10,14 +11,32 @@ function App() {
       Hello world!
 
       <button onClick={() => {
-        fetch('http://localhost:3000/')
-          .then(res => res.text())
-          .then(data => setMesssage(data))
+        fetch('http://localhost:3000/bicycle')
+          .then(async (res) => {
+            const data = await res.json();
+            console.log(data);
+            return data;
+          })
+          .then(data => setBicycles(JSON.stringify(data)))
       }}>
-        Fetch Message
+        Fetch Bicycles
       </button>
 
-      <p>{message}</p>
+      <p>{bicycles}</p>
+
+      <button onClick={() => {
+        fetch('http://localhost:3000/customer')
+          .then(async (res) => {
+            const data = await res.json();
+            console.log(data);
+            return data;
+          })
+          .then(data => setCustomers(JSON.stringify(data)))
+      }}>
+        Fetch Customers
+      </button>
+
+    <p>{customers}</p>
     </main>
   )
 }
