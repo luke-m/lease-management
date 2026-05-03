@@ -26,9 +26,18 @@ app.get("/customer", (req, res) => {
 app.post("/lease-contract", (req, res) => {
   const requestData = req.body;
   console.log("Received lease contract data:", requestData);
+  const customer = getCustomers().find(c => c.id === requestData.customerId);
+  const bicycle = getBicycles().find(b => b.id === requestData.bicycleId);
+
+  if (!customer) {
+    return res.status(400).json({ error: "Customer not found" });
+  }
+  if (!bicycle) {
+    return res.status(400).json({ error: "Bicycle not found" });
+  }
   const leaseContract = createLeaseContract(
-    requestData.customer,
-    requestData.bicycle,
+    customer,
+    bicycle,
     requestData.startDate,
     requestData.endDate,
     requestData.monthlyRate
