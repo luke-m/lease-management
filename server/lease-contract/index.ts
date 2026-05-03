@@ -2,9 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 import type { LeaseContract, Customer, Bicycle } from "../types";
 
 
-// In-memory storage for lease contracts
-const leaseContracts: LeaseContract[] = [];
-
+// domain model and business logic
 export function createLeaseContract(customer: Customer, bicycle: Bicycle, startDate: string, endDate: string, monthlyRate: number) {
     const leaseDurationInYears = (new Date(endDate).getTime() - new Date(startDate).getTime()) / (1000 * 60 * 60 * 24 * 365);
     // constraints
@@ -25,6 +23,11 @@ export function createLeaseContract(customer: Customer, bicycle: Bicycle, startD
         status: "active"
     }
 }
+
+// "repository"
+
+// In-memory storage for lease contracts
+const leaseContracts: LeaseContract[] = [];
 
 export function saveLeaseContract(leaseContract: LeaseContract) {
     // In a real application, you would save this to a database
