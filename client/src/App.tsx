@@ -57,7 +57,7 @@ function BicycleSelect({ selectedBicycle, setSelectedBicycle }: { selectedBicycl
         setSelectedBicycle(bicycle || null);
       }} value={selectedBicycle ? selectedBicycle.id : ''}>
         {bicyclesData.map(bicycle => (
-          <option key={bicycle.id} value={bicycle.id}>{bicycle.brand} {bicycle.model}</option>
+          <option key={bicycle.id} value={bicycle.id}>{bicycle.brand} {bicycle.model} ({bicycle.condition})</option>
         ))}
       </select>}
     </div>
