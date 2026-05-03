@@ -41,15 +41,13 @@ function App() {
 
   return (
     <main>
-      Hello world!
-
       <h2>Bicycles</h2>
       <ul>
         {bicycles.map(b => (
           <li key={b.id}>{b.brand} {b.model} ({b.category}) - {b.condition}</li>
         ))}
       </ul>
-      
+
       <h2>Customers</h2>
       <ul>
         {customers.map(c => (

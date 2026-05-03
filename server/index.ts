@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import { getBicycles } from './bicycle/index';
 import { getCustomers } from './customer/index';
+import { getLeaseContracts, saveLeaseContract } from './lease-contract';
+import { createLeaseContract } from './lease-contract';
 
 const app = express();
 app.use(cors());
@@ -19,6 +21,25 @@ app.get("/bicycle", (req, res) => {
 app.get("/customer", (req, res) => {
   const customers = getCustomers();
   res.json(customers);
+});
+
+app.post("/lease-contract", (req, res) => {
+  const requestData = req.body;
+  console.log("Received lease contract data:", requestData);
+  const leaseContract = createLeaseContract(
+    requestData.customer,
+    requestData.bicycle,
+    requestData.startDate,
+    requestData.endDate,
+    requestData.monthlyRate
+  );
+  saveLeaseContract(leaseContract);
+  res.json({ message: "Lease contract created successfully!" });
+});
+
+app.get("/lease-contract", (req, res) => {
+  const leaseContracts = getLeaseContracts();
+  res.json(leaseContracts);
 });
 
 app.listen(3000, () => {
