@@ -9,10 +9,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello from the backend!');
-});
-
 app.get("/bicycle", (req, res) => {
   const bicycles = getBicycles();
   res.json(bicycles);
@@ -35,6 +31,7 @@ app.post("/lease-contract", (req, res) => {
   if (!bicycle) {
     return res.status(400).json({ error: "Bicycle not found" });
   }
+  
   const leaseContract = createLeaseContract(
     customer,
     bicycle,

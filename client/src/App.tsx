@@ -125,11 +125,7 @@ function App() {
     },
   })
 
-  return (
-    <main>
-      <h1>Lease Management System</h1>
-      <h2>Create Lease Contract</h2>
-      <form onSubmit={(e: React.SubmitEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!selectedCustomer) {
           alert("Please select a customer.");
@@ -163,8 +159,13 @@ function App() {
           endDate,
           monthlyRate
         });
-      }}>
+      }
 
+  return (
+    <main>
+      <h1>Lease Management System</h1>
+      <h2>Create Lease Contract</h2>
+      <form onSubmit={handleSubmit}>
         <CustomerSelect selectedCustomer={selectedCustomer} setSelectedCustomer={setSelectedCustomer} />
 
         <BicycleSelect selectedBicycle={selectedBicycle} setSelectedBicycle={setSelectedBicycle} />
@@ -172,7 +173,6 @@ function App() {
         <div>
           <label>Start Date:</label>
           <input type="date" onChange={(e) => {
-            console.log(e.target.value);
             setStartDate(e.target.value)
           }} />
           <label>End Date:</label>
